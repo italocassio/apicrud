@@ -11,10 +11,12 @@ namespace Store.Data
         }
 
         public DbSet<Product> Products { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Product>().HasKey(x => x.Id);
+            modelBuilder.Entity<Usuario>().HasKey(x => x.Id);
         }
     }
 }
